@@ -27,7 +27,6 @@ document.onkeyup = function (event) {
         wins++;
         userGuess = [];
         computerGuess = [];
-        //guessesLeft = 9;
         console.log("winner winner chicken dinner");
         //selects random letter again and prints wins to screen
         var rand = letters[Math.floor(Math.random() * letters.length)]; {
@@ -35,6 +34,11 @@ document.onkeyup = function (event) {
             computerGuess.push(rand);
             document.getElementById("wins").innerText = "Wins: " + wins;
             document.getElementById("letters").innerText = "Letters Guessed So Far: " + userGuess;
+
+            if (guessesLeft === 0 && losses++ || wins++) {
+                guessesLeft = 9;
+                document.getElementById("guesses").innerText = "Guesses Left: " + guessesLeft;
+            }
         }
         // if guess is wrong decreases guesses and prints to screen number of guesses remaining
     } else if (userGuess[0] !== computerGuess[0]) {
@@ -47,7 +51,6 @@ document.onkeyup = function (event) {
         losses++;
         userGuess = [];
         computerGuess = [];
-        //guessesLeft = 9;
         //picks random letter again and prints losses to screen
         var rand = letters[Math.floor(Math.random() * letters.length)]; {
             console.log(rand);

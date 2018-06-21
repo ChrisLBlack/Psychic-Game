@@ -1,0 +1,20 @@
+body {
+    background: url(../images/back-ground.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 10%;
+    text-align: center;
+    margin-left: auto;
+    color: white;
+}
+
+.container {
+    margin-top: 10%;
+    align-content: center;
+    background: gray;
+    text-align: center;
+    color: white;
+}
